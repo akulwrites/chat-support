@@ -1,15 +1,13 @@
-// UserProfile.js
 import mongoose from 'mongoose';
 import autoIncrement from 'mongoose-auto-increment';
 
 const { Schema, model } = mongoose;
 
-// Initialize auto-increment plugin
 autoIncrement.initialize(mongoose.connection);
 
 const userProfileSchema = new Schema({
   userId: {
-    type: Number, // Use Number type for auto-incrementing field
+    type: Number,
     unique: true,
   },
   username: {

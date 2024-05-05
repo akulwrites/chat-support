@@ -1,21 +1,17 @@
-// Register.js
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate instead of useHistory
+import { useNavigate } from 'react-router-dom';
 
 function Register() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const navigate = useNavigate(); // Use useNavigate hook instead of useHistory
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Here you would make a request to your backend to register the user
-    // For now, let's assume the registration is successful
     const registrationSuccessful = true;
 
     if (registrationSuccessful) {
-      // Redirect back to login page
-      navigate('/login'); // Use navigate instead of history.push
+      navigate('/login');
     }
   };
 

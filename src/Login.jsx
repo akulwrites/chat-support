@@ -1,4 +1,3 @@
-// Login.js
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -9,15 +8,12 @@ function Login() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Here you would make a request to your backend to check if the user exists
-    // For now, let's assume the user exists
+
     const userExists = true;
 
     if (userExists) {
-      // Redirect to home page or user dashboard
       navigate('/user');
     } else {
-      // Redirect to register page
       navigate('/register');
     }
   };
